@@ -1,0 +1,45 @@
+<style>
+
+#res{
+background-color:red;
+}
+
+#wys{
+background-color:green;
+}
+
+</style>
+
+
+<h3>Fomularz kontaktowy</h3>
+
+<table>
+	<tr>
+<td>Imię:</td> <td><input type="text" name="imie"></td>
+	</tr>
+	<tr>
+<td>Nazwisko:</td> <td><input type="text" name="nazwisko"></td>
+	</tr>
+	<tr>
+<td>E-Mail:</td> <td><input type="text" name="email"></td>
+	</tr>
+	<tr>
+<td>Usługa:</td> <td> 
+						<select>
+							<option value="repair">naprawa komputera</option>
+							<option value="recovery">odzyskiwanie danych</option>
+							<option value="software">problemy z oprogramowaniem</option>
+							<option value="lan">konfiguracja sieci LAN</option>
+							<option value="other">inne</option>
+						</select> 
+				</td>
+	</tr>
+	<tr>
+<td></td> <td><input type="checkbox" name="kopia"> Wyślij kopię wiadomości</td>
+	</tr>
+	<tr>
+<td><input type="reset" value="Resetuj" id="res"></td> <td><input type="submit" value="Prześlij" id="wys"></td>
+</table>
+
+<p id="wynik">
+</p>
