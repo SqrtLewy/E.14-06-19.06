@@ -1,45 +1,74 @@
 <style>
 
-#res{
-background-color:red;
-}
+    #res {
+        background-color: red;
+    }
 
-#wys{
-background-color:green;
-}
+    #wys {
+        background-color: green;
+    }
 
 </style>
+
+<script type="text/javascript">
+
+    function przeslij() {
+
+        var imie = document.getElementById("imie").value;
+        var nazwisko = document.getElementById("nazwisko").value;
+        var email = document.getElementById("email").value;
+        var eemail = email.toLowerCase();
+        var usluga = document.getElementById("wybierz").value;
+
+
+        document.getElementById("wynik").innerHTML = imie + ' ' + nazwisko;
+        document.getElementById("wynik2").innerHTML = eemail;
+        document.getElementById("wynik3").innerHTML = 'Usługa: ' + usluga;
+    }
+</script>
 
 
 <h3>Fomularz kontaktowy</h3>
 
 <table>
-	<tr>
-<td>Imię:</td> <td><input type="text" name="imie"></td>
-	</tr>
-	<tr>
-<td>Nazwisko:</td> <td><input type="text" name="nazwisko"></td>
-	</tr>
-	<tr>
-<td>E-Mail:</td> <td><input type="text" name="email"></td>
-	</tr>
-	<tr>
-<td>Usługa:</td> <td> 
-						<select>
-							<option value="repair">naprawa komputera</option>
-							<option value="recovery">odzyskiwanie danych</option>
-							<option value="software">problemy z oprogramowaniem</option>
-							<option value="lan">konfiguracja sieci LAN</option>
-							<option value="other">inne</option>
-						</select> 
-				</td>
-	</tr>
-	<tr>
-<td></td> <td><input type="checkbox" name="kopia"> Wyślij kopię wiadomości</td>
-	</tr>
-	<tr>
-<td><input type="reset" value="Resetuj" id="res"></td> <td><input type="submit" value="Prześlij" id="wys"></td>
+    <tr>
+        <td>Imię:</td>
+        <td><input type="text" id="imie"></td>
+    </tr>
+    <tr>
+        <td>Nazwisko:</td>
+        <td><input type="text" id="nazwisko"></td>
+    </tr>
+    <tr>
+        <td>E-Mail:</td>
+        <td><input type="text" id="email"></td>
+    </tr>
+    <tr>
+        <td>Usługa:</td>
+        <td>
+            <select id="wybierz">
+                <option value="naprawa komputera">naprawa komputera</option>
+                <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                <option value="problemy z oprogramowaniem">problemy z oprogramowaniem</option>
+                <option value="konfiguracja sieci LAN">konfiguracja sieci LAN</option>
+                <option value="inne">inne</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="checkbox" id="kopia" checked> Wyślij kopię wiadomości</td>
+    </tr>
+    <tr>
+        <td><input type="reset" value="Resetuj" id="res"></td>
+        <td><input type="submit" value="Prześlij" id="wys" onclick="przeslij()"></td>
 </table>
 
 <p id="wynik">
+</p>
+
+<p id="wynik2">
+</p>
+
+<p id="wynik3">
 </p>
